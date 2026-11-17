@@ -24,3 +24,49 @@ The `assets/images/*.svg` files are original vector illustrations created for th
 - https://www.chaithanyaenterprises.com/specialization
 - https://www.venindia.com/
 - https://aarviencon.com/
+
+
+## Version 7 updates
+- Replaced illustration placeholders with real free-use stock photography from Pexels (loaded by URL).
+- Converted the Contact page into a sendable static form using FormSubmit.
+- Added a thank-you page for form submissions.
+
+### Stock image sources used
+- Team meeting: https://www.pexels.com/photo/diverse-business-team-meeting-in-modern-office-36733421/
+- Interview: https://www.pexels.com/photo/candidate-having-an-interview-5439152/
+- Industrial: https://www.pexels.com/photo/modern-industrial-production-facility-interior-38804512/
+- Commercial building: https://www.pexels.com/photo/modern-office-building-facade-with-windows-28589010/
+- Healthcare / hospital: https://www.pexels.com/photo/aerial-view-of-hospital-building-at-sunset-36078152/
+- Hospitality: https://www.pexels.com/photo/exterior-of-a-building-19627822/
+- Automation: https://www.pexels.com/photo/industrial-control-room-with-electrical-panels-38217230/
+- Energy / substation: https://www.pexels.com/photo/high-voltage-electrical-substation-in-somerville-36358684/
+
+### Form note
+The contact form uses FormSubmit (`https://formsubmit.co/`). The first submission may trigger a verification email to the receiving mailbox before messages begin forwarding normally.
+
+
+## V8 — Home sliding banner
+The home hero now has 3 slides (recruitment, specialist hiring, industrial sectors) with auto-play every 6.5 seconds, navigation dots and arrows, and pauses while hovered or keyboard-focused. Auto-play is disabled when reduced motion is requested. Photographs are free-use Pexels stock photographs (externally hosted), not pictures of GGC employees or client projects.
+
+
+## V8.1 correction
+- Kept 3 unique hero banner slides in the order: Banner 1 (team meeting), Banner 2 (job interview), Banner 3 (industrial facility).
+- Reduced repeated use of the same hero images elsewhere on the home page.
+
+
+## Version 8.2 — Local images (no remote image links)
+
+All website image `src` attributes now point to local files under `assets/images/`.
+The ZIP includes local copies of the three hero photos cropped from the supplied website screenshots; five industry-specific local illustration placeholders are also included.
+
+**For original, higher-quality Pexels photos**: Open Windows PowerShell in this project folder and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\download-original-photos.ps1
+```
+
+The script downloads all eight original stock images once, saving directly to `assets/images/` and replacing the included local previews. Afterwards the website uses **only local paths** and can be deployed to GitHub Pages without external photo dependencies.
+
+Photo downloads require internet access once. Fonts (Google Fonts) and contact submission (FormSubmit) remain external web services.
+
+Do not copy reference companies' project photos or client logos without permission.
