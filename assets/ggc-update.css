@@ -1,0 +1,11 @@
+/* GGC scoped additions; existing styles are untouched */
+.ggc-purpose-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+.ggc-purpose-card{background:#fff;border:1px solid #e2e6e9;border-top:4px solid #d5aa53;border-radius:12px;padding:30px;box-shadow:0 10px 25px #10263c0a}
+.ggc-purpose-card h3{font-size:1.5rem;color:#071b38}.ggc-purpose-card p{color:#536273;margin-bottom:0}
+.ggc-project-teaser{display:grid;grid-template-columns:1.35fr .65fr;gap:36px;align-items:center}
+.ggc-teaser-industries{display:grid;gap:12px}.ggc-teaser-industries span{border-left:3px solid #d5aa53;background:#f7f8f9;padding:13px 15px;border-radius:4px;font-weight:700}
+.ggc-project-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.ggc-project-card{border:1px solid #e2e6e9;border-radius:12px;background:white;padding:26px;box-shadow:0 10px 24px #11263a08}
+.ggc-project-card h3{color:#071b38}.ggc-project-card p{color:#5c6b79}.ggc-disclaimer{margin-top:25px;padding:18px;border-left:4px solid #d5aa53;background:#fcf8ed;border-radius:5px}
+@media(max-width:850px){.ggc-purpose-grid,.ggc-project-teaser{grid-template-columns:1fr}.ggc-project-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ggc-project-cards{grid-template-columns:1fr}.ggc-purpose-card{padding:22px}}

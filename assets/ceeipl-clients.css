@@ -1,0 +1,14 @@
+/* CEEIPL client gallery - scoped styles: does not change the existing theme or slider */
+.ceeipl-client-section{background:#edf4fb;padding:68px 0 76px;color:#263b59}
+.ceeipl-client-header{text-align:center;margin:0 auto 34px;max-width:760px}
+.ceeipl-client-header h2{color:#263b59;margin:6px 0 12px;font-size:clamp(1.8rem,3vw,2.55rem)}
+.ceeipl-client-header p{font-size:15px;line-height:1.6;color:#5e7082;margin:0}
+.ceeipl-client-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.ceeipl-client-card{background:#fff;border:1px solid #e7edf4;min-height:154px;padding:15px;border-radius:3px;display:flex;align-items:center;justify-content:center;transition:transform .2s ease,box-shadow .2s ease}
+.ceeipl-client-card:hover{transform:translateY(-3px);box-shadow:0 10px 20px #17365315}
+.ceeipl-client-card img{display:block;width:100%;height:116px;object-fit:contain}
+.ceeipl-client-attribution{font-size:13px;margin:26px 0 0;color:#63758a;line-height:1.7;text-align:center}
+.ceeipl-client-attribution a{text-decoration:underline;color:#174e84}
+@media(max-width:1050px){.ceeipl-client-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}}
+@media(max-width:720px){.ceeipl-client-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.ceeipl-client-card{min-height:110px;padding:10px}.ceeipl-client-card img{height:90px}}
+@media(max-width:480px){.ceeipl-client-section{padding:48px 0}.ceeipl-client-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
