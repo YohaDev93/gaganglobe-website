@@ -928,3 +928,95 @@ a {
         transition: none
     }
 }
+
+/* GGC-INNER-PAGE-BANNER-START */
+/* GGC premium inner-page banner
+   This styles existing <section class="pagehero"> elements across the site.
+   It does not affect the homepage slider. */
+.pagehero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(112deg, #06162c 0%, #0b2a4b 52%, #174764 100%);
+  color: #fff;
+  padding: clamp(70px, 8vw, 108px) 0;
+}
+.pagehero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 42% 105% at 85% 34%, rgba(213,170,83,.18), transparent 72%),
+    radial-gradient(ellipse 53% 130% at 108% 130%, rgba(80,148,183,.17), transparent 75%),
+    linear-gradient(90deg, rgba(0,0,0,.12), transparent 67%);
+}
+.pagehero::after {
+  content: "";
+  position: absolute;
+  width: min(48vw, 670px);
+  aspect-ratio: 1;
+  right: -9%;
+  top: -65%;
+  border: 1px solid rgba(224,190,120,.13);
+  border-radius: 50%;
+  box-shadow: 0 0 0 75px rgba(224,190,120,.025), 0 0 0 155px rgba(224,190,120,.02);
+  z-index: -1;
+  pointer-events: none;
+}
+.pagehero > .wrap { position: relative; z-index: 1; }
+.pagehero .eyebrow {
+  color: #e9c681;
+  letter-spacing: .21em;
+  font-weight: 800;
+}
+.pagehero h1 {
+  color: #fff;
+  max-width: 900px;
+  margin: 15px 0 19px;
+  font-size: clamp(2.25rem, 4.3vw, 4.2rem);
+  line-height: 1.13;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.pagehero p {
+  color: #d8e4ed;
+  max-width: 730px;
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.72;
+  margin: 0;
+}
+@media (max-width: 620px) {
+  .pagehero { padding: 58px 0 64px; }
+  .pagehero::after { width: 340px; right: -210px; top: -80px; }
+  .pagehero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pagehero { scroll-behavior: auto; }
+}
+/* GGC-INNER-PAGE-BANNER-END */
+
+/* GGC-SMOOTH-NAVIGATION-START */
+/* Reserve the two-part header area until the fragment is inserted. */
+#site-header {
+  min-height: 124px;
+  background: #fff;
+}
+#site-header:has(.nav) {
+  min-height: 0;
+}
+@media (max-width: 620px) {
+  #site-header { min-height: 151px; }
+  #site-header:has(.nav) { min-height: 0; }
+}
+
+/* Native cross-document transitions: progressive enhancement only. */
+
+::view-transition-old(root),
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  
+}
+/* GGC-SMOOTH-NAVIGATION-END */
