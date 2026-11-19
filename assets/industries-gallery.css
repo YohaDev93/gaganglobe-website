@@ -1,0 +1,15 @@
+/* GGC Industries photographic cards - isolated from existing site styles */
+.ggc-industry-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:34px}
+.ggc-industry-photo-card{overflow:hidden;background:#fff;border:1px solid #e0e7ee;border-radius:15px;box-shadow:0 8px 24px rgba(7,27,56,.065);transition:transform .2s ease,box-shadow .2s ease}
+.ggc-industry-photo-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(7,27,56,.12)}
+.ggc-industry-photo-wrap{height:215px;background:linear-gradient(135deg,#dfe7f0,#a8bdcc);overflow:hidden}
+.ggc-industry-photo-wrap img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.ggc-industry-photo-card:hover img{transform:scale(1.04)}
+.ggc-industry-photo-body{padding:22px 24px 26px}
+.ggc-industry-no{font-size:13px;font-weight:800;letter-spacing:.13em;color:#ab7926}
+.ggc-industry-photo-body h3{font-size:1.17rem;line-height:1.35;letter-spacing:-.025em;margin:10px 0}
+.ggc-industry-photo-body p{font-size:14px;line-height:1.65;color:#5d6d80;margin:0}
+.ggc-industry-action{text-align:center;margin-top:38px}
+@media(max-width:950px){.ggc-industry-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:610px){.ggc-industry-photo-grid{grid-template-columns:1fr;gap:18px}.ggc-industry-photo-wrap{height:220px}.ggc-industry-photo-body{padding:20px}}
+@media(prefers-reduced-motion:reduce){.ggc-industry-photo-card,.ggc-industry-photo-wrap img{transition:none}}
