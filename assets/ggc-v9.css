@@ -4,7 +4,6 @@
 .purpose-panel{padding:30px 28px;border-radius:14px;background:#071b38;color:white;box-shadow:0 10px 34px #071b3816}
 /* .purpose-panel:nth-child(2){background:#faf7f1;color:#172a3d;border:1px solid #e9dfce} */
 .purpose-panel h3{color:#d5aa53;font-size:1.5rem;margin:12px 0 12px}
-.purpose-panel:nth-child(2) h3{color:#906927}
 .purpose-panel p{margin:0;line-height:1.85}
 .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:32px}
 .project-card{border:1px solid #e2e6e9;box-shadow:0 9px 26px #14263710;border-radius:14px;overflow:hidden;background:white}
