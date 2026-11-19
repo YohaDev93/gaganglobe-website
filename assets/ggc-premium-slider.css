@@ -1,0 +1,33 @@
+/* Premium GGC hero — isolated styles, loaded AFTER existing site CSS */
+.ggc-premium-hero.hero-carousel {position:relative; width:100%; height:clamp(560px,78vh,790px); min-height:560px; padding:0; background:#081b34; isolation:isolate; overflow:hidden; color:white}
+.ggc-premium-hero .hero-slides,.ggc-premium-hero .hero-slide {position:absolute; inset:0; width:100%; height:100%; margin:0; padding:0}
+.ggc-premium-hero .hero-slide {display:block; opacity:0; visibility:hidden; pointer-events:none; transition:opacity .85s ease, visibility .85s ease}
+.ggc-premium-hero .hero-slide.is-active {opacity:1; visibility:visible; pointer-events:auto; z-index:1}
+.ggc-premium-hero .ggc-hero-bg {position:absolute; inset:0; background-size:cover; background-position:center 42%; transform:scale(1.035); transition:transform 7s ease; z-index:0}
+.ggc-premium-hero .hero-slide.is-active .ggc-hero-bg {transform:scale(1)}
+.ggc-premium-hero .ggc-hero-shade {position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,rgba(4,17,37,.96) 0%,rgba(5,23,48,.90) 29%,rgba(6,25,50,.67) 53%,rgba(7,29,54,.25) 100%),linear-gradient(0deg,rgba(4,14,31,.38),transparent 40%)}
+.ggc-premium-hero .ggc-hero-inner {position:relative; z-index:2; display:flex; align-items:center; height:100%; width:100%; max-width:1200px; margin:0 auto; padding:70px 32px 100px; box-sizing:border-box}
+.ggc-premium-hero .ggc-hero-copy {max-width:760px; width:100%; color:#fff; text-align:left}
+.ggc-premium-hero .ggc-hero-kicker {display:block; color:#e3bd74; font-size:12px; font-weight:750; letter-spacing:.22em; line-height:1.6; margin-bottom:22px}
+.ggc-premium-hero .ggc-hero-copy h1,.ggc-premium-hero .ggc-hero-copy h2 {font-size:clamp(40px,5.1vw,72px); font-weight:750; line-height:1.08; letter-spacing:-.035em; color:#fff; margin:0 0 24px; max-width:740px; text-wrap:balance}
+.ggc-premium-hero .ggc-hero-copy h1 em,.ggc-premium-hero .ggc-hero-copy h2 em {font-style:normal; color:#e8bd6b}
+.ggc-premium-hero .ggc-hero-copy p {max-width:610px; color:#edf3f9; font-size:clamp(16px,1.5vw,19px); line-height:1.75; margin:0 0 34px}
+.ggc-premium-hero .ggc-hero-actions {display:flex; gap:14px; flex-wrap:wrap; align-items:center}
+.ggc-premium-hero .ggc-hero-button {display:inline-flex; min-height:50px; padding:13px 23px; border-radius:4px; align-items:center; justify-content:center; gap:15px; text-decoration:none; font-weight:700; font-size:14px; transition:background .2s ease,transform .2s ease,border-color .2s ease}
+.ggc-premium-hero .ggc-hero-button:hover {transform:translateY(-2px)}
+.ggc-premium-hero .ggc-hero-button.primary {background:#dbad59; color:#0a2142; border:1px solid #dbad59}
+.ggc-premium-hero .ggc-hero-button.primary:hover {background:#f0c97f; border-color:#f0c97f; color:#0a2142}
+.ggc-premium-hero .ggc-hero-button.secondary {color:#fff; border:1px solid rgba(255,255,255,.8); background:rgba(9,27,53,.14)}
+.ggc-premium-hero .ggc-hero-button.secondary:hover {background:rgba(255,255,255,.16); color:#fff}
+.ggc-premium-hero .ggc-hero-controls {position:absolute; z-index:4; inset:auto 0 28px; display:flex; align-items:center; justify-content:space-between; max-width:1200px; padding:0 32px; box-sizing:border-box}
+.ggc-premium-hero .hero-dots {display:flex; gap:10px; align-items:center}
+.ggc-premium-hero .hero-dot {display:flex; align-items:center; justify-content:center; width:32px; height:26px; cursor:pointer; border:0; background:transparent; padding:0}
+.ggc-premium-hero .hero-dot span {display:block; height:3px; width:100%; border-radius:4px; background:rgba(255,255,255,.46); transition:background .2s ease}
+.ggc-premium-hero .hero-dot.is-active span {background:#e7b764}
+.ggc-premium-hero .hero-arrow-group {display:flex; gap:10px}
+.ggc-premium-hero .hero-arrow {display:grid; place-items:center; width:46px; height:46px; border:1px solid rgba(255,255,255,.6); border-radius:50%; background:rgba(12,29,52,.33); color:#fff; font-size:22px; cursor:pointer; transition:background .2s ease}
+.ggc-premium-hero .hero-arrow:hover {background:rgba(219,173,89,.85); color:#0a2142}
+.ggc-premium-hero button:focus-visible,.ggc-premium-hero a:focus-visible {outline:3px solid #f5cc79;outline-offset:4px}
+@media(max-width:767px){.ggc-premium-hero.hero-carousel{height:640px;min-height:640px}.ggc-premium-hero .ggc-hero-bg{background-position:65% center}.ggc-premium-hero .ggc-hero-shade{background:linear-gradient(90deg,rgba(4,17,37,.94),rgba(4,17,37,.77) 65%,rgba(4,17,37,.55))}.ggc-premium-hero .ggc-hero-inner{padding:60px 24px 108px}.ggc-premium-hero .ggc-hero-copy h1,.ggc-premium-hero .ggc-hero-copy h2{font-size:clamp(33px,8vw,46px)}.ggc-premium-hero .ggc-hero-kicker{font-size:10px;letter-spacing:.13em}.ggc-premium-hero .ggc-hero-copy p{font-size:15px;line-height:1.6}.ggc-premium-hero .ggc-hero-button{padding:11px 16px;min-height:45px;font-size:13px}.ggc-premium-hero .ggc-hero-controls{padding:0 24px;bottom:22px}}
+@media(max-width:390px){.ggc-premium-hero.hero-carousel{height:700px;min-height:700px}.ggc-premium-hero .ggc-hero-actions{gap:9px}}
+@media(prefers-reduced-motion:reduce){.ggc-premium-hero .hero-slide,.ggc-premium-hero .ggc-hero-bg{transition:none!important}}
