@@ -1,0 +1,29 @@
+/* GGC – About Us / Our Strength: isolated styling */
+.ggc-strength{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 37%,#eaf2fa 0%,#f8fafc 42%,#fff 83%);}
+.ggc-strength:before{content:"";position:absolute;inset:0;background-image:linear-gradient(130deg,transparent 48%,rgba(15,60,112,.035) 49%,transparent 50%);background-size:90px 90px;pointer-events:none}
+.ggc-strength .wrap{position:relative;z-index:1}
+.ggc-strength-heading{text-align:center;max-width:780px;margin:0 auto 38px}
+.ggc-strength-heading h2{margin:8px 0 12px;color:#0a2c58}
+.ggc-strength-heading .lead{margin:0 auto;line-height:1.7}
+.ggc-strength-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(205px,.75fr) minmax(0,1fr);gap:24px;align-items:center}
+.ggc-strength-column{display:grid;gap:15px}
+.ggc-strength-card{display:flex;align-items:flex-start;gap:13px;background:#fff;border:1px solid #e0eaf3;border-left:3px solid #d4a44e;border-radius:13px;padding:18px 17px;box-shadow:0 8px 26px rgba(4,29,59,.055);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.ggc-strength-card:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(4,29,59,.12);border-color:#d4ad67}
+.ggc-strength-num{flex:none;min-width:29px;font-size:12px;letter-spacing:.09em;color:#bd852c;font-weight:800;line-height:1.7}
+.ggc-strength-card h3{font-size:16px;line-height:1.35;color:#0b2a52;margin:0 0 5px;font-weight:750}
+.ggc-strength-card p{margin:0;font-size:13px;line-height:1.55;color:#52637b}
+.ggc-strength-center{position:relative;text-align:center;display:flex;align-items:center;flex-direction:column;justify-content:center;gap:22px;min-height:290px}
+.ggc-strength-halo{width:min(100%,255px);aspect-ratio:1;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(20,81,136,.20);background:radial-gradient(circle,#fff 40%,#dcebf9 72%,rgba(212,164,78,.10) 73%);box-shadow:0 18px 50px rgba(7,43,86,.13);position:relative}
+.ggc-strength-halo:before,.ggc-strength-halo:after{content:"";position:absolute;inset:10px;border:1px dashed rgba(180,136,60,.37);border-radius:50%;animation:ggc-spin 40s linear infinite}
+.ggc-strength-halo:after{inset:-12px;border:1px solid rgba(22,75,130,.12);animation:ggc-pulse 4s ease-in-out infinite}
+.ggc-strength-ring{width:76%;height:76%;border-radius:50%;background:#061b37;display:grid;place-items:center;box-shadow:0 0 0 7px #fff,0 14px 30px rgba(6,27,55,.18);overflow:hidden}
+.ggc-strength-ring img{width:100%;height:100%;object-fit:contain}
+.ggc-strength-center>span{font-size:11px;line-height:1.6;font-weight:800;letter-spacing:.17em;color:#9b6e25;max-width:210px}
+.ggc-strength-footnote{text-align:center;margin:28px auto 13px;color:#56677c;max-width:760px;font-size:14px}
+.ggc-strength-link{text-align:center}
+@keyframes ggc-spin{to{transform:rotate(360deg)}}
+@keyframes ggc-pulse{50%{transform:scale(1.035);opacity:.45}}
+@media(min-width:900px){.ggc-motion-ready .ggc-strength-card{opacity:0;transform:translateY(19px)}.ggc-motion-ready .ggc-strength-card.ggc-in-view{animation:ggc-reveal .6s ease-out both;animation-delay:calc(var(--i,0)*70ms)}@keyframes ggc-reveal{to{opacity:1;transform:translateY(0)}}}
+@media(max-width:900px){.ggc-strength-layout{grid-template-columns:1fr 1fr}.ggc-strength-center{grid-column:1/-1;grid-row:1;min-height:0;padding:10px 0}.ggc-strength-halo{max-width:185px}.ggc-strength-card{height:100%;box-sizing:border-box}.ggc-strength-column{align-content:start}}
+@media(max-width:600px){.ggc-strength-layout{grid-template-columns:1fr;gap:12px}.ggc-strength-center{grid-column:1;grid-row:1}.ggc-strength-column{gap:12px}.ggc-strength-heading{margin-bottom:22px}.ggc-strength-card{padding:15px}}
+@media(prefers-reduced-motion:reduce){.ggc-strength-halo:before,.ggc-strength-halo:after{animation:none}.ggc-strength-card{animation:none!important;opacity:1!important;transform:none!important;transition:none}}
