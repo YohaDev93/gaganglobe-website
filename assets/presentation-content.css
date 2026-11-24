@@ -1,0 +1,11 @@
+/* GGC corporate presentation content additions; isolated from existing components. */
+.ggc-content-service-grid,.ggc-content-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.ggc-content-services{margin-top:42px}
+.ggc-content-service-grid article,.ggc-content-feature-grid article,.ggc-content-process article{background:#fff;border:1px solid #dfe6ed;border-radius:15px;padding:24px;box-shadow:0 9px 28px rgba(7,27,56,.035)}
+.ggc-content-service-grid h4,.ggc-content-feature-grid h3,.ggc-content-process h3{color:#091e3a;margin:0 0 10px;font-size:1.05rem}
+.ggc-content-service-grid p,.ggc-content-feature-grid p,.ggc-content-process p{color:#53657a;margin:0;line-height:1.65}
+.ggc-content-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.ggc-content-process article span{display:inline-block;margin-bottom:12px;color:#aa741b;font-weight:800;letter-spacing:.07em}
+.ggc-content-why{background:#f7f9fc}
+@media(max-width:850px){.ggc-content-service-grid,.ggc-content-feature-grid,.ggc-content-process{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ggc-content-service-grid,.ggc-content-feature-grid,.ggc-content-process{grid-template-columns:1fr}}
