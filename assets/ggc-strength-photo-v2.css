@@ -1,0 +1,37 @@
+/* GGC — Our Strength V2. Image elements keep photos reliably visible above card backgrounds. */
+.ggc-strength-v2 { position:relative; isolation:isolate; padding-block:clamp(52px,6vw,88px); background:radial-gradient(circle at center,#e7f1fb 0%,#f7f9fc 57%,#fff 100%); overflow:hidden; }
+.ggc-strength-v2::before {content:"";position:absolute;inset:0;pointer-events:none;opacity:.11;background:repeating-linear-gradient(132deg,transparent 0 90px,#b2c4d8 91px,#b2c4d8 92px,transparent 93px 150px);}
+.ggc-strength-v2 .wrap {position:relative;z-index:1}
+.ggc-strength-v2 .ggc-strength-photo-heading {max-width:770px;text-align:center;margin:0 auto 30px}
+.ggc-strength-v2 .ggc-strength-photo-heading h2 {color:#071b38;font-size:clamp(2rem,4vw,3.2rem);margin:8px 0 12px}
+.ggc-strength-v2 .ggc-strength-photo-heading p {color:#52657b;line-height:1.65;margin:0}
+.ggc-strength-v2 .ggc-strength-photo-layout {display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,.58fr) minmax(0,1fr);align-items:center;gap:clamp(14px,2.5vw,32px)}
+.ggc-strength-v2 .ggc-strength-photo-column {display:grid;gap:16px;min-width:0}
+.ggc-strength-v2 .ggc-strength-card {position:relative;display:flex;align-items:flex-end;isolation:isolate;min-height:192px;overflow:hidden;border-radius:18px;background:#102944;box-shadow:0 14px 32px rgba(6,25,51,.17);border:1px solid rgba(255,255,255,.18);transform:translateZ(0);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease;outline-offset:4px}
+.ggc-strength-v2 .ggc-strength-card > img.ggc-strength-card-image {display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;opacity:1!important;visibility:visible!important;z-index:0;transform:scale(1.001);transition:transform .85s ease;filter:saturate(1.08)}
+.ggc-strength-v2 .ggc-strength-card-shade {position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,22,46,.12) 0%,rgba(5,22,46,.55) 38%,rgba(3,15,35,.95) 100%);transition:opacity .35s ease}
+.ggc-strength-v2 .ggc-strength-card-content {position:relative;z-index:2;padding:17px 20px 19px;width:100%;color:#fff!important;text-align:left}
+.ggc-strength-v2 .ggc-strength-num {display:block;color:#f5c66b;font-weight:800;font-size:.76rem;letter-spacing:.13em;margin-bottom:8px}
+.ggc-strength-v2 .ggc-strength-card h3 {margin:0 0 7px;color:#fff!important;font-size:clamp(1.03rem,1.5vw,1.22rem);line-height:1.25;font-weight:750;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+.ggc-strength-v2 .ggc-strength-card p {margin:0;color:#e8eef6!important;font-size:.84rem;line-height:1.45;max-width:38ch}
+.ggc-strength-v2 .ggc-strength-card:hover,.ggc-strength-v2 .ggc-strength-card:focus-visible {transform:translateY(-7px);box-shadow:0 22px 42px rgba(6,25,51,.28)}
+.ggc-strength-v2 .ggc-strength-card:hover > img.ggc-strength-card-image,.ggc-strength-v2 .ggc-strength-card:focus-visible > img.ggc-strength-card-image {transform:scale(1.10)}
+.ggc-strength-v2 .ggc-strength-card:focus-visible {outline:3px solid #ddad4f}
+.ggc-strength-v2 .ggc-strength-photo-center {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center;min-width:0}
+.ggc-strength-v2 .ggc-strength-logo-halo {position:relative;width:min(100%,220px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff 55%,#e9f1fa 100%);border:1px solid #d5e2f2;display:grid;place-items:center;box-shadow:0 0 0 12px rgba(187,213,238,.22),0 18px 40px rgba(19,55,91,.17);animation:ggc-v2-breathe 4s ease-in-out infinite}
+.ggc-strength-v2 .ggc-strength-logo-halo::before {content:"";position:absolute;inset:-13px;border-radius:50%;border:1px dashed #d5ab59;animation:ggc-v2-spin 40s linear infinite}
+.ggc-strength-v2 .ggc-strength-logo-halo img {height:84%;width:84%;object-fit:contain;border-radius:50%}
+.ggc-strength-v2 .ggc-strength-photo-center p {color:#a67627;font-size:.75rem;font-weight:800;letter-spacing:.16em;line-height:1.75;max-width:200px;margin:0}
+.ggc-strength-v2 .ggc-strength-photo-footnote {text-align:center;margin:28px auto 0;color:#526781;font-size:.92rem}
+.ggc-strength-v2 .ggc-strength-photo-footnote a {color:#a17027;text-decoration:underline;text-underline-offset:3px}
+@keyframes ggc-v2-spin {to{transform:rotate(360deg)}}
+@keyframes ggc-v2-breathe {50%{box-shadow:0 0 0 20px rgba(187,213,238,.12),0 18px 48px rgba(19,55,91,.22)}}
+@media (prefers-reduced-motion:no-preference) {
+ .ggc-strength-v2.ggc-strength-motion-ready .ggc-strength-card {opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease;transition-delay:var(--ggc-strength-delay,0ms)}
+ .ggc-strength-v2.ggc-strength-motion-ready .ggc-strength-card.ggc-strength-in-view {opacity:1;transform:translateY(0)}
+ .ggc-strength-v2.ggc-strength-motion-ready .ggc-strength-card.ggc-strength-in-view:hover,.ggc-strength-v2.ggc-strength-motion-ready .ggc-strength-card.ggc-strength-in-view:focus-visible {transform:translateY(-7px)}
+}
+@media (max-width:1020px){.ggc-strength-v2 .ggc-strength-photo-layout{grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr)}.ggc-strength-v2 .ggc-strength-logo-halo{width:155px}.ggc-strength-v2 .ggc-strength-card{min-height:204px}}
+@media (max-width:760px){.ggc-strength-v2 .ggc-strength-photo-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ggc-strength-v2 .ggc-strength-photo-center{grid-column:1/-1;grid-row:1;padding:6px 0 20px}.ggc-strength-v2 .ggc-strength-photo-column{gap:12px}.ggc-strength-v2 .ggc-strength-card{min-height:198px}.ggc-strength-v2 .ggc-strength-card-content{padding:14px}}
+@media (max-width:520px){.ggc-strength-v2 .ggc-strength-photo-layout{grid-template-columns:1fr}.ggc-strength-v2 .ggc-strength-photo-center{grid-column:1}.ggc-strength-v2 .ggc-strength-card{min-height:180px}.ggc-strength-v2 .ggc-strength-card p{font-size:.88rem}}
+@media (prefers-reduced-motion:reduce){.ggc-strength-v2 .ggc-strength-logo-halo,.ggc-strength-v2 .ggc-strength-logo-halo::before{animation:none!important}.ggc-strength-v2 .ggc-strength-card,.ggc-strength-v2 .ggc-strength-card-image{transition:none!important}.ggc-strength-v2 .ggc-strength-card{opacity:1!important;transform:none!important}}
