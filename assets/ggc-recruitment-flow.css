@@ -1,0 +1,27 @@
+/* GGC — editable six-stage process flow, inspired by the corporate presentation. */
+.ggc-flow{padding:clamp(52px,7vw,100px) 0;background:linear-gradient(138deg,#f2f9ff 0%,#ffffff 38%,#e8f7ff 100%);color:#0a2847;overflow:hidden;isolation:isolate}
+.ggc-flow .ggc-flow-shell{max-width:1440px;margin-inline:auto;padding-inline:clamp(16px,3vw,44px)}
+.ggc-flow .ggc-flow-intro{text-align:center;max-width:850px;margin:0 auto 47px}
+.ggc-flow .ggc-flow-kicker{display:inline-block;color:#b27824;font-size:12px;font-weight:800;letter-spacing:.22em;margin-bottom:12px}
+.ggc-flow h2{font-size:clamp(30px,3.6vw,48px);font-weight:800;line-height:1.16;letter-spacing:-.035em;color:#082749;margin:0 0 15px}
+.ggc-flow .ggc-flow-intro p{font-size:clamp(15px,1.4vw,18px);line-height:1.65;color:#4a647e;margin:0}
+.ggc-flow-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;position:relative;list-style:none;margin:0;padding:0;counter-reset:none}
+/* Connecting track extends behind every numbered step */
+.ggc-flow-steps::before{content:"";position:absolute;z-index:0;left:8%;right:8%;top:50px;height:4px;background:linear-gradient(90deg,#1e80d6,#15b7c9,#26b89f,#7a85e2,#2b9de9,#e5ac4d);border-radius:12px;opacity:.85}
+.ggc-flow-step{--tone:#277dd0;--pale:#eaf5ff;position:relative;z-index:1;min-width:0;border:1px solid #d7e8f3;border-radius:22px;background:linear-gradient(165deg,var(--pale),#fff 74%);box-shadow:0 12px 29px rgba(7,60,110,.09);padding:20px 16px 24px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;text-align:center}
+.ggc-flow-step:hover{transform:translateY(-8px);border-color:var(--tone);box-shadow:0 20px 38px rgba(4,60,110,.16)}
+.ggc-flow--blue{--tone:#2278d6;--pale:#e9f4ff}.ggc-flow--cyan{--tone:#119cc4;--pale:#e6f9ff}.ggc-flow--teal{--tone:#12a293;--pale:#e5fbf5}.ggc-flow--violet{--tone:#7875d8;--pale:#f0edff}.ggc-flow--sky{--tone:#198bd5;--pale:#e8f5ff}.ggc-flow--gold{--tone:#bd861f;--pale:#fff6df}
+.ggc-flow-top{position:relative;display:grid;justify-items:center;gap:7px;margin-bottom:17px}
+.ggc-flow-icon{width:75px;height:75px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--tone),#123f7a);color:#fff;box-shadow:0 9px 20px rgba(9,66,121,.17),0 0 0 7px #fff;border:3px solid #fff}
+.ggc-flow--gold .ggc-flow-icon{background:linear-gradient(145deg,#ecc66c,#b47916)}
+.ggc-flow-icon svg{width:35px;height:35px;overflow:visible}
+.ggc-flow-number{font-size:12px;letter-spacing:.13em;font-weight:900;color:var(--tone)}
+.ggc-flow-step h3{font-size:clamp(15px,1.22vw,18px);line-height:1.3;color:#0a2e55;margin:0 0 11px;font-weight:800;overflow-wrap:break-word}
+.ggc-flow-step p{font-size:13px;line-height:1.55;color:#516881;margin:0;overflow-wrap:break-word}
+.ggc-flow-outro{text-align:center;color:#49728d;font-size:14px;line-height:1.5;margin:25px 0 0}.ggc-flow-outro span{color:#d4a348;font-size:19px;margin-right:5px}
+@media(min-width:1201px){.ggc-flow-step:not(:last-child)::after{content:"›";position:absolute;z-index:4;right:-19px;top:34px;color:#ca943e;font-size:29px;line-height:1;font-weight:900;text-shadow:0 1px #fff}}
+@media(max-width:1200px){.ggc-flow-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.ggc-flow-steps::before{display:none}.ggc-flow-step{padding:22px 18px}.ggc-flow-step h3{font-size:18px}.ggc-flow-step p{font-size:14px}}
+@media(max-width:650px){.ggc-flow-steps{grid-template-columns:1fr;gap:14px;padding-left:19px}.ggc-flow-steps::before{display:block;left:4px;right:auto;top:20px;bottom:20px;width:3px;height:auto;background:linear-gradient(#2278d6,#16aeb5,#7a85e2,#e5ac4d)}.ggc-flow-step{display:grid;grid-template-columns:76px minmax(0,1fr);align-items:center;text-align:left;gap:15px;padding:18px 18px 18px 13px;border-radius:18px}.ggc-flow-top{margin:0;gap:5px}.ggc-flow-icon{width:58px;height:58px;box-shadow:0 0 0 4px #fff}.ggc-flow-icon svg{width:28px;height:28px}.ggc-flow-step h3{margin-bottom:6px;font-size:16px}.ggc-flow-step p{font-size:13px}.ggc-flow-intro{margin-bottom:29px!important}}
+/* Reveal effects are progressively enhanced: content stays visible if JS is disabled. */
+@media(prefers-reduced-motion:no-preference){.ggc-flow.ggc-flow-ready .ggc-flow-step{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease,box-shadow .3s ease,border-color .3s ease;transition-delay:calc(var(--step)*80ms)}.ggc-flow.ggc-flow-ready .ggc-flow-step.ggc-flow-visible{opacity:1;transform:translateY(0)}.ggc-flow.ggc-flow-ready .ggc-flow-step.ggc-flow-visible:hover{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.ggc-flow *, .ggc-flow *::before,.ggc-flow *::after{animation:none!important;transition:none!important}}
