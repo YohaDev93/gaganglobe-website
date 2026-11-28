@@ -1,0 +1,89 @@
+/* Option D alignment correction — load AFTER ggc-strength-circle-v1.css */
+/* Use a true placement grid so changes in text height cannot make cards overlap. */
+@media (min-width: 981px) {
+  .ggc-strength-circle .ggc-sc-stage {
+    display: grid;
+    grid-template-columns: minmax(230px, 1fr) minmax(190px, 300px) minmax(230px, 1fr);
+    grid-template-rows: repeat(6, minmax(210px, auto));
+    align-items: center;
+    justify-items: center;
+    gap: 14px clamp(18px, 3vw, 42px);
+    width: 100%;
+    max-width: 1250px;
+    min-height: 0;
+    margin-inline: auto;
+    isolation: isolate;
+  }
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card {
+    position: relative;
+    display: block;
+    left: auto; right: auto; top: auto; bottom: auto;
+    margin: 0;
+    width: min(100%, 272px);
+    height: auto;
+    min-height: 0;
+    align-self: center;
+    justify-self: center;
+    transform: none;
+    z-index: 2;
+    box-sizing: border-box;
+  }
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card:hover {
+    transform: translateY(-5px) scale(1.025);
+  }
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-01 {grid-area: 1 / 2;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-02 {grid-area: 2 / 3;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-03 {grid-area: 3 / 3;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-04 {grid-area: 4 / 3;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-05 {grid-area: 5 / 3;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-06 {grid-area: 6 / 2;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-07 {grid-area: 5 / 1;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-08 {grid-area: 4 / 1;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-09 {grid-area: 3 / 1;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card.is-10 {grid-area: 2 / 1;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-center {
+    position: relative;
+    grid-area: 3 / 2 / span 2 / 3;
+    left: auto; top: auto;
+    transform: none;
+    width: clamp(190px, 21vw, 252px);
+    height: clamp(190px, 21vw, 252px);
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-ring {
+    position: absolute;
+    width: min(74%, 820px);
+    height: auto;
+    aspect-ratio: 1;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  .ggc-strength-circle .ggc-sc-stage .ring-inner {width: min(54%, 610px);}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-media {height: 105px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-copy {padding: 13px 15px 16px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-copy h3 {font-size: clamp(17px, 1.5vw, 20px); margin-bottom: 5px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-copy p {font-size: 13px; line-height: 1.42;}
+}
+/* At intermediate sizes, use a clean two-column layout instead of squeezing the ring. */
+@media (min-width: 981px) and (max-width: 1130px) {
+  .ggc-strength-circle .ggc-sc-stage {
+    grid-template-columns: minmax(215px,1fr) minmax(175px,210px) minmax(215px,1fr);
+    grid-template-rows: repeat(6, minmax(208px, auto));
+    gap: 10px 15px;
+  }
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-center {width: 184px; height: 184px; padding: 15px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-logo-shell {width: 96px; height: 96px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-logo-shell img {width: 78px; height: 78px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-center strong {font-size: 13px;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-center span {font-size: 11px;}
+}
+@media (max-width: 980px) {
+  .ggc-strength-circle .ggc-sc-stage {max-width: 760px; align-items: stretch;}
+  .ggc-strength-circle .ggc-sc-stage .ggc-sc-card {height: 100%;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .ggc-strength-circle .ggc-sc-card,
+  .ggc-strength-circle .ggc-sc-media img {transition: none !important;}
+}
