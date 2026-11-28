@@ -262,6 +262,10 @@ a {
     background: #f7f8f9
 }
 
+.section.guide {
+    background: #4c797a
+}
+
 .section.dark {
     background: var(--navy);
     color: #fff
@@ -269,6 +273,16 @@ a {
 
 .section.dark p {
     color: #c7d4e0
+}
+
+.eyebrow.guide{
+    color:#fff;
+}
+.guide{
+    color: aliceblue;
+}
+.cards .guide{
+    color: #565151;
 }
 
 .lead {
@@ -1014,9 +1028,9 @@ a {
 /* Native cross-document transitions: progressive enhancement only. */
 
 ::view-transition-old(root),
-
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-old(root),
   
 }
+
 /* GGC-SMOOTH-NAVIGATION-END */
