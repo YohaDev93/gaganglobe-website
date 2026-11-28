@@ -1,0 +1,40 @@
+/* GGC editable process wave. No image background, no option/step-number badges. */
+.ggc-editable-wave{--ggc-navy:#082d5e;--ggc-gold:#d6a13b;--ggc-text:#52627b;background:#fff;padding:74px 0 90px;color:var(--ggc-navy);overflow:hidden}
+.ggc-editable-wave *{box-sizing:border-box}
+.ggc-editable-wave__wrap{max-width:1450px;width:calc(100% - 48px);margin:0 auto}
+.ggc-editable-wave__heading{text-align:center;max-width:950px;margin:0 auto 16px}
+.ggc-editable-wave__eyebrow{display:inline-block;letter-spacing:.2em;color:#b88425;font-size:12px;font-weight:800;margin:0 0 13px}
+.ggc-editable-wave__heading h2{font-size:clamp(29px,3.3vw,48px);line-height:1.16;margin:0 0 13px;font-weight:800;color:var(--ggc-navy);letter-spacing:-.03em}
+.ggc-editable-wave__heading p{font-size:clamp(15px,1.35vw,18px);line-height:1.55;color:var(--ggc-text);margin:0}
+.ggc-editable-wave__stage{position:relative;height:530px;width:100%;isolation:isolate}
+.ggc-editable-wave__path{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none}
+.ggc-editable-wave__path path{fill:none;stroke:#d0d2d5;stroke-width:6.5;stroke-linecap:round;stroke-linejoin:round}
+.ggc-editable-wave .ggc-wave-step{position:absolute;top:0;bottom:0;left:var(--x);transform:translateX(-50%);width:clamp(134px,15%,210px);z-index:1;text-align:center;display:block}
+.ggc-editable-wave .ggc-wave-step--1{--x:8.3%;--y:302px;--accent1:#174a88;--accent2:#062b5a}
+.ggc-editable-wave .ggc-wave-step--2{--x:25%;--y:201px;--accent1:#ffda75;--accent2:#c89520}
+.ggc-editable-wave .ggc-wave-step--3{--x:41.7%;--y:302px;--accent1:#174a88;--accent2:#062b5a}
+.ggc-editable-wave .ggc-wave-step--4{--x:58.3%;--y:201px;--accent1:#ffda75;--accent2:#c89520}
+.ggc-editable-wave .ggc-wave-step--5{--x:75%;--y:302px;--accent1:#174a88;--accent2:#062b5a}
+.ggc-editable-wave .ggc-wave-step--6{--x:91.7%;--y:201px;--accent1:#ffda75;--accent2:#c89520}
+.ggc-editable-wave .ggc-wave-step__icon{position:absolute;top:calc(var(--y) - 60px);left:50%;transform:translateX(-50%);width:120px;height:120px;border-radius:50%;background:linear-gradient(145deg,var(--accent1),var(--accent2));color:#fff;display:grid;place-items:center;border:6px solid white;box-shadow:0 9px 24px rgba(8,45,94,.14);transition:scale .28s ease,box-shadow .28s ease,transform .28s ease;cursor:default}
+.ggc-editable-wave .ggc-wave-step__icon svg{width:52px;height:52px;display:block;filter:drop-shadow(0 2px 2px rgba(0,0,0,.15))}
+.ggc-editable-wave .ggc-wave-step:hover .ggc-wave-step__icon,.ggc-editable-wave .ggc-wave-step:focus-within .ggc-wave-step__icon{scale:1.14;box-shadow:0 16px 35px rgba(8,45,94,.23)}
+.ggc-editable-wave .ggc-wave-step__copy{position:absolute;left:50%;transform:translateX(-50%);width:100%;min-width:0}
+.ggc-editable-wave .ggc-wave-step--lower .ggc-wave-step__copy{top:calc(var(--y) + 73px)}
+.ggc-editable-wave .ggc-wave-step--upper .ggc-wave-step__copy{bottom:calc(530px - var(--y) + 74px)}
+.ggc-editable-wave .ggc-wave-step__copy h3{font-family:inherit;font-size:clamp(15px,1.5vw,21px);line-height:1.25;color:var(--ggc-navy);margin:0 0 11px;font-weight:800}
+.ggc-editable-wave .ggc-wave-step__copy h3:after{content:"";display:block;width:31px;height:2px;border-radius:3px;background:var(--ggc-gold);margin:9px auto 0}
+.ggc-editable-wave .ggc-wave-step__copy p{font-family:inherit;font-size:clamp(12px,1.09vw,15px);line-height:1.52;color:#54627a;margin:0}
+@media(max-width:1050px){
+ .ggc-editable-wave__wrap{width:calc(100% - 36px)}
+ .ggc-editable-wave__stage{height:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 20px;padding-top:22px}
+ .ggc-editable-wave__path{display:none}
+ .ggc-editable-wave .ggc-wave-step{position:relative;left:auto;top:auto;bottom:auto;transform:none;width:100%;height:auto;min-height:0;display:flex;flex-direction:column;align-items:center}
+ .ggc-editable-wave .ggc-wave-step__icon{position:static;transform:none;order:0;width:105px;height:105px;margin-bottom:15px}
+ .ggc-editable-wave .ggc-wave-step__icon svg{width:46px;height:46px}
+ .ggc-editable-wave .ggc-wave-step__copy{position:static;transform:none;order:1;max-width:290px}
+ .ggc-editable-wave .ggc-wave-step__copy h3{font-size:19px}
+ .ggc-editable-wave .ggc-wave-step__copy p{font-size:14px}
+}
+@media(max-width:540px){.ggc-editable-wave{padding:56px 0}.ggc-editable-wave__stage{grid-template-columns:1fr;gap:32px}.ggc-editable-wave__heading{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.ggc-editable-wave .ggc-wave-step__icon{transition:none}}

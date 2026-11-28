@@ -1,0 +1,21 @@
+/* GGC top six-card recruitment process: soft colours only.
+   Does not target the second wave/infographic design. */
+.ggc-flow .ggc-flow-step {
+  border: 1px solid rgba(21, 71, 129, .13) !important;
+  box-shadow: 0 12px 30px rgba(20, 55, 100, .09) !important;
+  transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+}
+.ggc-flow .ggc-flow-step:nth-child(1) { background: #eaf3ff !important; border-top: 4px solid #2877da !important; }
+.ggc-flow .ggc-flow-step:nth-child(2) { background: #e6f9ff !important; border-top: 4px solid #00a4c9 !important; }
+.ggc-flow .ggc-flow-step:nth-child(3) { background: #e7faf2 !important; border-top: 4px solid #0da895 !important; }
+.ggc-flow .ggc-flow-step:nth-child(4) { background: #f0edff !important; border-top: 4px solid #7065d9 !important; }
+.ggc-flow .ggc-flow-step:nth-child(5) { background: #eaf5ff !important; border-top: 4px solid #248ece !important; }
+.ggc-flow .ggc-flow-step:nth-child(6) { background: #fff5df !important; border-top: 4px solid #d59a28 !important; }
+.ggc-flow .ggc-flow-step:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 42px rgba(19, 57, 103, .17) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ggc-flow .ggc-flow-step { transition: none; }
+  .ggc-flow .ggc-flow-step:hover { transform: none; }
+}
