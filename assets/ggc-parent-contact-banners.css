@@ -1,0 +1,70 @@
+/* GGC — Parent Company & Contact banners; only scoped pagehero styles. */
+section.ggc-parent-photo-hero,
+section.ggc-contact-photo-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(400px, 39vw, 590px);
+  padding: clamp(68px, 7vw, 105px) 0;
+  overflow: hidden;
+  border-radius: 0;
+  background-color: #092954;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.ggc-parent-photo-hero { background-image: url('images/page-banners/parent-engineering.webp'); }
+section.ggc-contact-photo-hero { background-image: url('images/page-banners/contact-support.webp'); background-position: center 50%; }
+/* A slight shadow only behind copy, not a full-screen heavy blue layer. */
+section.ggc-parent-photo-hero::before,
+section.ggc-contact-photo-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(2,16,39,.30) 0%, rgba(2,16,39,.08) 32%, transparent 62%);
+}
+section.ggc-parent-photo-hero .wrap,
+section.ggc-contact-photo-hero .wrap { position: relative; z-index: 1; width: 100%; }
+section.ggc-parent-photo-hero .wrap > *,
+section.ggc-contact-photo-hero .wrap > * { max-width: min(640px, 65%); }
+section.ggc-parent-photo-hero .eyebrow,
+section.ggc-contact-photo-hero .eyebrow {
+  display: block;
+  color: #eac16c;
+  font-weight: 800;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 7px rgba(0,0,0,.25);
+}
+section.ggc-parent-photo-hero h1,
+section.ggc-contact-photo-hero h1 {
+  color: #fff;
+  font-size: clamp(2.25rem, 4.6vw, 4.55rem);
+  font-weight: 800;
+  line-height: 1.09;
+  text-shadow: 0 2px 14px rgba(0,0,0,.35);
+}
+section.ggc-parent-photo-hero p,
+section.ggc-contact-photo-hero p {
+  color: #fff;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+@media (max-width: 760px) {
+  section.ggc-parent-photo-hero,
+  section.ggc-contact-photo-hero { min-height: 420px; padding: 65px 0; }
+  section.ggc-parent-photo-hero { background-position: 58% center; }
+  section.ggc-contact-photo-hero { background-position: 60% center; }
+  section.ggc-parent-photo-hero::before,
+  section.ggc-contact-photo-hero::before {
+    background: linear-gradient(90deg, rgba(3,18,45,.85) 0%, rgba(3,18,45,.72) 72%,rgba(3,18,45,.42) 100%);
+  }
+  section.ggc-parent-photo-hero .wrap > *,
+  section.ggc-contact-photo-hero .wrap > * { max-width: 100%; }
+  section.ggc-parent-photo-hero h1,
+  section.ggc-contact-photo-hero h1 { font-size: clamp(2rem, 7vw, 3rem); }
+}

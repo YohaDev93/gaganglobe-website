@@ -33,7 +33,7 @@
   width:152px;height:152px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   background:#fff;border:8px solid rgba(195,140,31,.08);box-shadow:0 12px 28px rgba(6,28,61,.10);
 }
-.ggc-sc-logo-shell img{width:122px;height:122px;object-fit:contain;display:block;}
+.ggc-sc-logo-shell img{width:170px;height:170px;object-fit:contain;display:block;}
 .ggc-sc-center strong{font-size:18px;line-height:1.35;color:#082d63;}
 .ggc-sc-center span{font-size:13px;color:#6b7b90;}
 
