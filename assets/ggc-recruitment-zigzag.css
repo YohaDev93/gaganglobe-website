@@ -1,0 +1,29 @@
+/* GGC Zigzag recruitment process — standalone, scoped, keeps existing process. */
+.ggc-zigzag{--zg-navy:#09284a;position:relative;overflow:hidden;padding:70px 0 86px;background:radial-gradient(circle at 25% 14%,#dff0ff 0,transparent 31%),radial-gradient(circle at 82% 80%,#eef1ff 0,transparent 35%),linear-gradient(145deg,#f8fcff 0%,#edf7ff 100%);color:var(--zg-navy);isolation:isolate}
+.ggc-zigzag .ggc-zigzag-wrap{width:min(100% - 36px,1320px);margin-inline:auto}
+.ggc-zigzag-heading{text-align:center;max-width:850px;margin:0 auto 44px}
+.ggc-zigzag-kicker{display:inline-block;padding:8px 18px;border-radius:50px;font-size:11px;letter-spacing:.18em;font-weight:800;color:#1264ac;background:#e0eeff}
+.ggc-zigzag-heading h2{margin:15px 0 10px;font-weight:800;color:#09284a;font-size:clamp(29px,3.6vw,48px);line-height:1.16}
+.ggc-zigzag-heading p{color:#536b86;font-size:clamp(14px,1.5vw,17px);line-height:1.6;margin:0}
+.ggc-zigzag-board{position:relative;isolation:isolate;padding:30px 54px 32px}
+.ggc-zigzag-route{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:visible}
+.ggc-zigzag-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,auto);column-gap:clamp(35px,5vw,88px);row-gap:clamp(94px,11vw,140px);list-style:none;padding:0;margin:0;align-items:stretch}
+.ggc-zigzag-step{--zc:#2278d6;position:relative;min-height:260px;padding:75px 25px 29px;text-align:center;background:rgba(255,255,255,.97);border-radius:30px;box-shadow:0 18px 36px rgba(17,55,99,.12);border:1px solid rgba(65,113,158,.16);border-top:5px solid var(--zc);transition:transform .35s,box-shadow .35s}
+.ggc-zigzag-step:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(17,55,99,.18)}
+.ggc-zigzag-blue{--zc:#2874da}.ggc-zigzag-cyan{--zc:#00a1ca}.ggc-zigzag-green{--zc:#02aa97}.ggc-zigzag-violet{--zc:#8567dc}.ggc-zigzag-sky{--zc:#228fe3}.ggc-zigzag-gold{--zc:#d5a12e}
+.ggc-zigzag-step[data-step="4"]{grid-column:3;grid-row:2}.ggc-zigzag-step[data-step="5"]{grid-column:2;grid-row:2}.ggc-zigzag-step[data-step="6"]{grid-column:1;grid-row:2}
+.ggc-zigzag-icon{position:absolute;width:86px;height:86px;left:50%;top:-45px;transform:translateX(-50%);border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--zc),#103f72);border:8px solid #fff;outline:6px solid color-mix(in srgb,var(--zc) 16%,white);box-shadow:0 8px 21px rgba(13,58,103,.19);z-index:4}
+.ggc-zigzag-icon svg{width:36px;height:36px}
+.ggc-zigzag-number{display:block;color:var(--zc);font-size:12px;font-weight:900;letter-spacing:.13em;margin-bottom:8px}
+.ggc-zigzag-step h3{font-size:clamp(17px,1.75vw,23px);line-height:1.25;color:#082549;font-weight:800;margin:0 0 15px}
+.ggc-zigzag-step p{color:#536b87;font-size:clamp(13px,1.3vw,16px);line-height:1.65;margin:0}
+.ggc-zigzag-foot{text-align:center;margin:30px auto 0;color:#617b96;font-size:13px}
+.ggc-zigzag-back{fill:none;stroke:#cbdcf0;stroke-width:15;stroke-linecap:round;opacity:.95}
+.ggc-zigzag-wire{fill:none;stroke:url(#ggc-zigzag-gradient);stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:19 12;animation:ggc-zigzag-dash 4s linear infinite}
+.ggc-zigzag-point{fill:white;stroke:#258de0;stroke-width:4;filter:drop-shadow(0 1px 5px rgba(24,85,148,.25))}
+.ggc-zigzag-arrow{fill:#fff;stroke:#1f86d5;stroke-width:3}
+@keyframes ggc-zigzag-dash{to{stroke-dashoffset:-124}}
+@media(min-width:801px){.ggc-zigzag-ready .ggc-zigzag-step{opacity:0;translate:0 25px;transition:opacity .6s,translate .6s,transform .35s,box-shadow .35s;transition-delay:calc(var(--i)*70ms)}.ggc-zigzag-ready .ggc-zigzag-step.ggc-zigzag-visible{opacity:1;translate:0 0}}
+@media(max-width:800px){.ggc-zigzag{padding:52px 0}.ggc-zigzag-board{padding:8px 0 8px}.ggc-zigzag-route{display:none}.ggc-zigzag-list{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:66px;column-gap:18px}.ggc-zigzag-step,.ggc-zigzag-step[data-step="4"],.ggc-zigzag-step[data-step="5"],.ggc-zigzag-step[data-step="6"]{grid-column:auto;grid-row:auto}.ggc-zigzag-step{min-height:250px;padding:62px 16px 25px}.ggc-zigzag-icon{width:72px;height:72px;top:-38px}.ggc-zigzag-icon svg{width:30px;height:30px}}
+@media(max-width:520px){.ggc-zigzag-list{grid-template-columns:1fr;row-gap:62px}.ggc-zigzag-step{min-height:0;padding:58px 22px 30px}.ggc-zigzag-heading{margin-bottom:55px}}
+@media(prefers-reduced-motion:reduce){.ggc-zigzag-wire{animation:none}.ggc-zigzag-ready .ggc-zigzag-step{opacity:1;translate:none;transition:none}}
