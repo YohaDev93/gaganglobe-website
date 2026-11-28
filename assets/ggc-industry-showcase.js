@@ -31,7 +31,7 @@
     }
     function stop() { if(intervalId!==null) window.clearInterval(intervalId); intervalId=null; root.classList.remove('is-playing'); }
     function canPlay(){return !pausedByUser && !reducedMotion.matches && !document.hidden;}
-    function start(){stop();if(!canPlay())return;intervalId=window.setInterval(()=>activate(current+1),2000);root.classList.add('is-playing');}
+    function start(){stop();if(!canPlay())return;intervalId=window.setInterval(()=>activate(current+1),1000);root.classList.add('is-playing');}
     buttons.forEach((button,i)=>button.addEventListener('click',()=>{activate(i);start();}));
     root.addEventListener('mouseenter',()=>{pausedByUser=true;stop()});
     root.addEventListener('mouseleave',()=>{pausedByUser=false;start()});
