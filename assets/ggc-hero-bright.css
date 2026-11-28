@@ -1,0 +1,34 @@
+/* GGC true-bright hero. NO navy overlay or gradient is applied to images.
+   This CSS is inserted LAST in <head> by the installer. */
+.ggc-eil-hero.ggc-premium-hero.hero-carousel {background:#f5f9fc;}
+.ggc-eil-hero .hero-slide .ggc-hero-shade,
+.ggc-eil-hero .hero-slide::before,
+.ggc-eil-hero .hero-slide::after,
+.ggc-eil-hero .ggc-hero-bg::before,
+.ggc-eil-hero .ggc-hero-bg::after {background:none!important;background-image:none!important;box-shadow:none!important;opacity:0!important;content:none!important;pointer-events:none!important;}
+.ggc-eil-hero .hero-slide .ggc-hero-bg {background-color:transparent!important;background-blend-mode:normal!important;filter:none!important;background-position:center center;}
+/* Bright glass panel is uniformly translucent, NOT a dark gradient. */
+.ggc-eil-hero .ggc-hero-copy {
+  box-sizing:border-box;max-width:690px;padding:clamp(19px,2.5vw,38px);
+  border:1px solid rgba(255,255,255,.85);border-radius:18px;
+  background:rgba(255,255,255,.82)!important;
+  -webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);
+  box-shadow:0 12px 36px rgba(26,45,73,.11);
+}
+.ggc-eil-hero .ggc-hero-copy h1,.ggc-eil-hero .ggc-hero-copy h2 {color:#092b52!important;text-shadow:none!important;}
+.ggc-eil-hero .ggc-hero-copy h1 em,.ggc-eil-hero .ggc-hero-copy h2 em {color:#b78026!important;}
+.ggc-eil-hero .ggc-hero-copy p {color:#294866!important;text-shadow:none!important;}
+.ggc-eil-hero .ggc-hero-kicker {color:#916320!important;text-shadow:none!important;}
+.ggc-eil-hero .ggc-hero-button.secondary {color:#10345d!important;border-color:#244c76!important;background:rgba(255,255,255,.86)!important;}
+.ggc-eil-hero .ggc-hero-button.primary {background:#e7b65c!important;border-color:#d6a247!important;color:#07254a!important;}
+.ggc-eil-hero .hero-arrow {color:#0b3056!important;border-color:rgba(20,66,111,.65)!important;background:rgba(255,255,255,.80)!important;}
+.ggc-eil-hero .hero-dot span,.ggc-eil-hero .hero-dot.is-active span {background:rgba(17,64,111,.38)!important;}
+.ggc-eil-hero .hero-dot.is-active span:after {background:#cb9235!important;}
+/* Preserve the zoom from the current three-slide carousel. */
+.ggc-eil-hero .hero-slide.is-active .ggc-hero-bg {animation:ggc-bright-zoom 6.6s ease-out both!important;}
+@keyframes ggc-bright-zoom {from{transform:scale(1.015)}to{transform:scale(1.075)}}
+@media(max-width:767px){
+ .ggc-eil-hero .hero-slide .ggc-hero-bg {background-position:66% center!important;}
+ .ggc-eil-hero .ggc-hero-copy {max-width:95%;padding:20px;background:rgba(255,255,255,.88)!important;}
+}
+@media(prefers-reduced-motion:reduce){.ggc-eil-hero .hero-slide.is-active .ggc-hero-bg{animation:none!important;transform:none!important;}}

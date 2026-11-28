@@ -1,0 +1,32 @@
+/* GGC EIL-inspired hero option. Scoped to homepage carousel only.
+   Load after assets/ggc-premium-slider.css. Uses existing assets/script.js.
+   Photographs are illustrative AI-generated scenes, not real GGC personnel/projects. */
+.ggc-eil-hero.ggc-premium-hero.hero-carousel { height:clamp(570px,82vh,840px); background:#081c39; }
+.ggc-eil-hero .ggc-hero-bg { transform:scale(1.015); transition:none; background-position:center center; will-change:transform; }
+/* Each time a slide becomes active the gentle photo zoom starts anew. */
+.ggc-eil-hero .hero-slide.is-active .ggc-hero-bg { animation:ggc-eil-kenburns 6.6s cubic-bezier(.15,.08,.55,1) both; }
+@keyframes ggc-eil-kenburns { from { transform:scale(1.015); } to { transform:scale(1.095); } }
+.ggc-eil-hero .ggc-hero-shade { background:
+  linear-gradient(90deg,rgba(4,17,37,.97) 0%,rgba(5,23,48,.90) 24%,rgba(6,25,51,.72) 44%,rgba(7,29,55,.31) 77%,rgba(7,29,55,.12) 100%),
+  linear-gradient(0deg,rgba(4,14,31,.38) 0%,transparent 39%); }
+.ggc-eil-hero .ggc-hero-copy { max-width:740px; }
+.ggc-eil-hero .ggc-hero-copy h1,.ggc-eil-hero .ggc-hero-copy h2 { max-width:710px; text-shadow:0 3px 22px rgba(1,10,29,.18); }
+.ggc-eil-hero .ggc-hero-kicker { color:#edc879; }
+.ggc-eil-hero .ggc-hero-button.primary { background:#dbaa54; border-color:#dbaa54; color:#091d3a; }
+.ggc-eil-hero .hero-dot { width:43px; }
+.ggc-eil-hero .hero-dot span { position:relative; height:4px; overflow:hidden; background:rgba(255,255,255,.40); }
+.ggc-eil-hero .hero-dot.is-active span { background:rgba(255,255,255,.4); }
+.ggc-eil-hero .hero-dot.is-active span:after { content:""; position:absolute; inset:0; background:#e8ba64; transform-origin:left; animation:ggc-eil-progress 6.5s linear forwards; }
+@keyframes ggc-eil-progress { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+.ggc-eil-hero:hover .hero-dot.is-active span:after,
+.ggc-eil-hero:focus-within .hero-dot.is-active span:after { animation-play-state:paused; }
+@media (max-width:767px) {
+ .ggc-eil-hero.ggc-premium-hero.hero-carousel{height:650px; min-height:650px}
+ .ggc-eil-hero .ggc-hero-bg{background-position:68% center}
+ .ggc-eil-hero .ggc-hero-shade{background:linear-gradient(90deg,rgba(4,17,37,.96),rgba(4,17,37,.78) 62%,rgba(4,17,37,.51)),linear-gradient(0deg,rgba(4,14,31,.45),transparent 40%)}
+ .ggc-eil-hero .ggc-hero-copy h1,.ggc-eil-hero .ggc-hero-copy h2{font-size:clamp(32px,7.8vw,46px)}
+}
+@media (max-width:390px) { .ggc-eil-hero.ggc-premium-hero.hero-carousel{height:720px;min-height:720px} }
+@media (prefers-reduced-motion:reduce) {
+ .ggc-eil-hero .hero-slide.is-active .ggc-hero-bg,.ggc-eil-hero .hero-dot.is-active span:after {animation:none!important;transform:none!important}
+}

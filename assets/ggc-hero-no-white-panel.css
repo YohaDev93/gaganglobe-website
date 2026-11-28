@@ -1,0 +1,46 @@
+/* GGC HERO FIX — show photograph directly behind the text (no glass/white panel). */
+.ggc-eil-hero .ggc-hero-copy,
+.ggc-eil-hero .hero-slide .ggc-hero-copy {
+  background: transparent !important;
+  background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  max-width: 670px;
+}
+.ggc-eil-hero .ggc-hero-copy h1,
+.ggc-eil-hero .ggc-hero-copy h2 {
+  color: #fff !important;
+  text-shadow: 0 2px 15px rgba(0, 12, 32, .45) !important;
+}
+.ggc-eil-hero .ggc-hero-copy h1 em,
+.ggc-eil-hero .ggc-hero-copy h2 em { color: #e8b65a !important; }
+.ggc-eil-hero .ggc-hero-copy p {
+  color: #fff !important;
+  text-shadow: 0 2px 10px rgba(0, 12, 32, .6) !important;
+}
+.ggc-eil-hero .ggc-hero-kicker {
+  color: #f2c36e !important;
+  text-shadow: 0 2px 9px rgba(0, 12, 32, .7) !important;
+}
+.ggc-eil-hero .ggc-hero-button.secondary {
+  color: #fff !important;
+  border-color: rgba(255,255,255,.85) !important;
+  background: rgba(4,20,45,.16) !important;
+}
+.ggc-eil-hero .hero-arrow {
+  color: #fff !important;
+  border-color: rgba(255,255,255,.7) !important;
+  background: rgba(4,20,45,.2) !important;
+}
+@media (max-width:767px) {
+ .ggc-eil-hero .ggc-hero-copy,
+ .ggc-eil-hero .hero-slide .ggc-hero-copy {
+   max-width: 95%;
+   padding: 0 !important;
+   background: transparent !important;
+ }
+}

@@ -1,0 +1,30 @@
+/* GGC revised homepage hero: remove the previous overpowering navy gradient.
+   Preserve active slide zoom, navigation arrows, dots and buttons. */
+.ggc-eil-hero .ggc-hero-shade,
+.ggc-premium-hero .ggc-hero-shade {
+    background: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+}
+/* Keep HTML text readable against the supplied naturally darker left-side photos. */
+.ggc-eil-hero .ggc-hero-copy h1,
+.ggc-eil-hero .ggc-hero-copy h2,
+.ggc-eil-hero .ggc-hero-copy p,
+.ggc-eil-hero .ggc-hero-kicker {
+    text-shadow: 0 2px 12px rgba(2, 12, 30, .75), 0 1px 3px rgba(2, 12, 30, .45);
+}
+.ggc-eil-hero .ggc-hero-bg { background-position: center center; }
+/* Preserve zoom even if a previous CSS update was removed or reordered. */
+.ggc-eil-hero .hero-slide.is-active .ggc-hero-bg {
+    animation: ggc-photo-zoom 6.6s ease-out both;
+}
+@keyframes ggc-photo-zoom {
+    from { transform: scale(1.01); }
+    to { transform: scale(1.085); }
+}
+@media (max-width: 767px) {
+    .ggc-eil-hero .ggc-hero-bg { background-position: 63% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ggc-eil-hero .hero-slide.is-active .ggc-hero-bg { animation: none !important; transform: none !important; }
+}
