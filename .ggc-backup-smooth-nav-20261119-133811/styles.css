@@ -261,7 +261,18 @@ a {
 .section.soft {
     background: #f7f8f9
 }
-
+.section.guide {
+    background: #4c797a
+}
+.eyebrow.guide{
+    color:#fff;
+}
+.guide{
+    color: aliceblue;
+}
+.card .guide{
+    color: #565151;
+}
 .section.dark {
     background: var(--navy);
     color: #fff

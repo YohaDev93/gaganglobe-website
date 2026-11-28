@@ -1,0 +1,25 @@
+/* GGC inner-page banners — changes only About and Careers hero sections */
+section.ggc-about-photo-hero, section.ggc-careers-photo-hero {
+  position:relative; isolation:isolate; overflow:hidden;
+  display:flex; align-items:center; min-height:clamp(400px,43vw,610px);
+  padding:clamp(72px,8vw,110px) 0; border-radius:0;
+  background-color:#123d70; background-size:cover;
+  background-repeat:no-repeat; background-position:center center;
+}
+section.ggc-about-photo-hero { background-image:url('images/page-banners/about-corporate-team.webp'); background-position:center 49%; }
+section.ggc-careers-photo-hero { background-image:url('images/page-banners/careers-recruitment.webp'); background-position:center 47%; }
+section.ggc-about-photo-hero::before, section.ggc-careers-photo-hero::before {
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(90deg,rgba(5,24,52,.83) 0%,rgba(5,24,52,.64) 28%,rgba(5,24,52,.22) 57%,rgba(5,24,52,.04) 82%,transparent 100%);
+}
+section.ggc-about-photo-hero .wrap, section.ggc-careers-photo-hero .wrap {position:relative;z-index:1;width:100%;}
+section.ggc-about-photo-hero .wrap > *, section.ggc-careers-photo-hero .wrap > * {max-width:min(640px,64%);}
+section.ggc-about-photo-hero .eyebrow, section.ggc-careers-photo-hero .eyebrow {display:block;color:#f4c96c;letter-spacing:.2em;font-weight:800;}
+section.ggc-about-photo-hero h1, section.ggc-careers-photo-hero h1 {color:#fff; font-size:clamp(2.35rem,4.65vw,4.6rem);line-height:1.08;font-weight:800;text-shadow:0 3px 16px rgba(0,0,0,.35);}
+section.ggc-about-photo-hero p, section.ggc-careers-photo-hero p {color:#f3f7ff;font-size:clamp(1rem,1.3vw,1.22rem);line-height:1.7;text-shadow:0 2px 9px rgba(0,0,0,.32);}
+@media(max-width:760px){
+  section.ggc-about-photo-hero,section.ggc-careers-photo-hero{min-height:420px;padding:62px 0;background-position:60% center;}
+  section.ggc-about-photo-hero::before,section.ggc-careers-photo-hero::before{background:linear-gradient(90deg,rgba(5,24,52,.93),rgba(5,24,52,.78) 60%,rgba(5,24,52,.35));}
+  section.ggc-about-photo-hero .wrap > *,section.ggc-careers-photo-hero .wrap > *{max-width:100%;}
+  section.ggc-about-photo-hero h1,section.ggc-careers-photo-hero h1{font-size:clamp(2rem,7vw,3.1rem);}
+}

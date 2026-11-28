@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,6 +10,7 @@
     <link rel="stylesheet" href="assets/styles.css">
 <link rel="stylesheet" href="assets/ggc-update.css"><link rel="stylesheet" href="assets/ggc-industries.css">
 <link rel="stylesheet" href="assets/industries-gallery.css">
+  <link rel="stylesheet" href="assets/ggc-industry-showcase.css">
 </head>
 
 <body>
@@ -34,7 +34,42 @@
     </header>
 <!-- GGC-STATIC-HEADER:END -->
 </div>
-    <section class="pagehero"><div class="wrap"><span class="eyebrow">Our industry expertise</span><h1>Industries We Serve</h1><p>Connecting elite talent with organizations across specialist, engineering and project-led sectors.</p></div></section>
+    <!-- GGC-INDUSTRY-SHOWCASE:START -->
+<section class="ggc-ind-showcase" id="ggc-industries-showcase" aria-label="Industries we serve">
+  <div class="ggc-ind-showcase__images" aria-hidden="true">
+    <div class="ggc-ind-showcase__image is-active" data-showcase-image="0" style="background-image:url('assets/images/industry-showcase-facilities/01-steel.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="1" style="background-image:url('assets/images/industry-showcase-facilities/02-renewable.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="2" style="background-image:url('assets/images/industry-showcase-facilities/03-bess.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="3" style="background-image:url('assets/images/industry-showcase-facilities/04-infrastructure.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="4" style="background-image:url('assets/images/industry-showcase-facilities/05-oil-gas.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="5" style="background-image:url('assets/images/industry-showcase-facilities/06-data-centres.webp')"></div>
+    <div class="ggc-ind-showcase__image" data-showcase-image="6" style="background-image:url('assets/images/industry-showcase-facilities/07-mining.webp')"></div>
+  </div>
+  <div class="ggc-ind-showcase__tint" aria-hidden="true"></div>
+  <div class="ggc-ind-showcase__inner wrap">
+    <div class="ggc-ind-showcase__copy">
+      <span class="ggc-ind-showcase__kicker">GAGAN GLOBAL CONSULTING · INDUSTRIES WE SERVE</span>
+      <h1 id="ggc-ind-showcase-heading">Iron &amp; Steel</h1>
+      <p id="ggc-ind-showcase-description">Talent for steel production, fabrication and plant operations.</p>
+      
+    </div>
+    <div class="ggc-ind-showcase__navigation" style="display: none;">
+      <div class="ggc-ind-showcase__nav-title">Explore our sectors <span style="display: none;"></span></div>
+      <div class="ggc-ind-showcase__list" role="group" aria-label="Select industry">
+        <button type="button" class="ggc-ind-showcase__item is-active" data-showcase-index="0" data-title="Iron &amp; Steel" data-description="Talent for steel production, fabrication and plant operations." aria-pressed="true"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Iron &amp; Steel</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="1" data-title="Renewable Energy" data-description="Specialist staffing for solar, wind and renewable infrastructure." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Renewable Energy</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="2" data-title="Green Energy Storage (BESS)" data-description="Engineering and project talent for battery energy storage systems." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Green Energy Storage (BESS)</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="3" data-title="Infrastructure &amp; Construction" data-description="Workforce support for large-scale infrastructure and construction." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Infrastructure &amp; Construction</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="4" data-title="Oil &amp; Gas" data-description="Technical staffing for refining, pipeline and industrial operations." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Oil &amp; Gas</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="5" data-title="Data Centres" data-description="Infrastructure, electrical and operational talent for modern data centres." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Data Centres</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+        <button type="button" class="ggc-ind-showcase__item" data-showcase-index="6" data-title="Mining &amp; Industrial Projects" data-description="Skilled professionals for mining and heavy-industry environments." aria-pressed="false"><span class="ggc-ind-showcase__number"></span><span class="ggc-ind-showcase__label">Mining &amp; Industrial Projects</span><span class="ggc-ind-showcase__marker" aria-hidden="true">›</span></button>
+      </div>
+      
+    </div>
+  </div>
+  <div class="ggc-ind-showcase__progress" aria-hidden="true"><span></span></div>
+</section>
+<!-- GGC-INDUSTRY-SHOWCASE:END -->
 <section class="section ggc-industries-gallery" id="ggc-industry-list">
   <div class="wrap">
     <div class="eyebrow">Sector expertise</div>
@@ -130,6 +165,7 @@
     <script src="assets/script.js" defer></script>
 
     <script src="assets/shared-nav.js" defer></script>
+  <script src="assets/ggc-industry-showcase.js" defer></script>
 </body>
 
 </html>

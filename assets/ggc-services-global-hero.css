@@ -1,0 +1,81 @@
+/* GGC Services hero — scoped override; does NOT change other pages. */
+section.ggc-services-global-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: clamp(420px, 46vw, 650px);
+  padding: clamp(72px, 8vw, 120px) 0;
+  border-radius: 0;
+  background-color: #123d70;
+  background-image: url("images/services/global-talent-network.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Image has a bright left side. The overlay gives white text sufficient contrast. */
+section.ggc-services-global-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+    rgba(5, 24, 52, .88) 0%,
+    rgba(5, 24, 52, .76) 28%,
+    rgba(5, 24, 52, .36) 57%,
+    rgba(5, 24, 52, .06) 82%,
+    rgba(5, 24, 52, 0) 100%);
+}
+
+section.ggc-services-global-banner .wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+section.ggc-services-global-banner .wrap > * {
+  max-width: min(600px, 61%);
+}
+section.ggc-services-global-banner .eyebrow {
+  display: block;
+  color: #f7cc78;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .20em;
+  margin-bottom: 15px;
+}
+section.ggc-services-global-banner h1 {
+  max-width: 700px;
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: clamp(2.35rem, 4.6vw, 4.65rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -.035em;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, .32);
+}
+section.ggc-services-global-banner p {
+  color: #f1f6ff;
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(1rem, 1.28vw, 1.22rem);
+  line-height: 1.75;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .34);
+}
+@media (max-width: 760px) {
+  section.ggc-services-global-banner {
+    min-height: 440px;
+    padding: 65px 0;
+    background-position: 63% center;
+  }
+  section.ggc-services-global-banner::before {
+    background: linear-gradient(90deg,
+      rgba(5, 24, 52, .91),
+      rgba(5, 24, 52, .78) 55%,
+      rgba(5, 24, 52, .45));
+  }
+  section.ggc-services-global-banner .wrap > * { max-width: 100%; }
+  section.ggc-services-global-banner h1 { font-size: clamp(2rem, 7vw, 3.1rem); }
+}
