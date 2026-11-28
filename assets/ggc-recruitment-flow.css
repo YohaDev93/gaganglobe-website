@@ -25,3 +25,7 @@
 /* Reveal effects are progressively enhanced: content stays visible if JS is disabled. */
 @media(prefers-reduced-motion:no-preference){.ggc-flow.ggc-flow-ready .ggc-flow-step{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease,box-shadow .3s ease,border-color .3s ease;transition-delay:calc(var(--step)*80ms)}.ggc-flow.ggc-flow-ready .ggc-flow-step.ggc-flow-visible{opacity:1;transform:translateY(0)}.ggc-flow.ggc-flow-ready .ggc-flow-step.ggc-flow-visible:hover{transform:translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){.ggc-flow *, .ggc-flow *::before,.ggc-flow *::after{animation:none!important;transition:none!important}}
+.ggc-flow-step::after {
+  content: none !important;
+  display: none !important;
+}
